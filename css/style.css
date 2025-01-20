@@ -58,10 +58,6 @@ img {
     line-height: 40px;
 }
 
-@media screen and (width > 768px) {
-    
-}
-
 @media screen and (width > 1024px) {
     .title-m {
         font-size: var(--size-h2-l);
@@ -75,10 +71,6 @@ img {
     font-size: var(--size-h3-m);
     font-weight: 800;
     line-height: 25px;
-}
-
-@media screen and (width > 768px) {
-    
 }
 
 @media screen and (width > 1024px) {
@@ -150,6 +142,14 @@ img {
     padding-bottom: 96px;
 }
 
+@media screen and (width > 768px) {
+    .intro {
+        position: relative;
+        flex-direction: row-reverse;
+        gap: 0;
+    }
+}
+
 .intro-img {
     width: 100%;
 }
@@ -159,6 +159,16 @@ img {
     flex-direction: column;
     gap: 24px;
     padding-inline: 24px;
+}
+
+@media screen and (width > 768px) {
+    .intro-content {
+        position: absolute;
+        max-width: 398px;
+        padding: 0;
+        left: 39px;
+        top: 77px;
+    }   
 }
 
 .intro-title {
@@ -176,6 +186,12 @@ img {
     flex-direction: column;
 }
 
+@media screen and (width > 768px) {
+    .design {
+        flex-direction: row;
+    }   
+}
+
 .design-img {
     width: 100%;
 }
@@ -188,12 +204,26 @@ img {
     padding: 72px 24px 74px 24px;
 }
 
+@media screen and (width > 768px) {
+    .design-content {
+        max-width: 390px;
+        padding: 120px 40px 120px 69px;
+    }   
+}
+
 .design-pattern {
     position: absolute;
     width: 63px;
     height: 29px;
     top: -15px;
     left: 24px;
+}
+
+@media screen and (width > 768px) {
+    .design-pattern {
+        top: 145px;
+        left: -31px;
+    }
 }
 
 .design-span {
@@ -214,14 +244,36 @@ img {
 .steps {
     background-color: var(--red);
     color: var(--white);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: ;
     gap: 49px;
     padding: 96px 24px 93px 40px;
 }
 
+@media screen and (width > 768px) {
+    .steps {
+        flex-direction: row;
+        background-color: var(--white);
+        padding: 0;
+    }
+}
+
 .steps-title {
     margin: 0;
+    margin-bottom: 40px;
+}
+
+@media screen and (width > 768px) {
+    .steps-title {
+        color: var(--text-black);
+        position: relative;
+        top: 127px;
+        left: 39px;
+    }
+}
+
+.steps-subtitle {
+    margin-top: 0;
 }
 
 .steps-content {
@@ -230,17 +282,36 @@ img {
     gap: 84px;
 }
 
+@media screen and (width > 768px) {
+    .steps-content {
+        position: relative;
+        background-color: var(--red);
+        padding: 44px 45px 117px 59px;
+    }
+
+    .steps-content::after {
+        content: '';
+        background-color: var(--red);
+        position: absolute;
+        height: 120px;
+        width: 100%;
+        top: -120px;
+        left: 0;
+    }
+}
+
 .step {
     position: relative;
 }
 
 .steps-number {
     position: absolute;
-    bottom: 19px;
+    top: -45px;
     left: -16px;
     opacity: 0.25;
     font-size: 80px;
     font-weight: 800;
+    margin: 0;
 }
 
 .slider {
@@ -251,10 +322,24 @@ img {
     flex-direction: column;
 }
 
+@media screen and (width > 768px) {
+    .slider {
+        flex-direction: row-reverse;
+    }
+}
+
 .slider-header {
     padding: 64px 24px;
     order: 2;
 }
+
+@media screen and (width > 768px) {
+    .slider-header {
+        padding: 100px 0 100px 39px;
+    }
+}
+
+
 
 .slider-arrows {
     display: flex;
@@ -269,6 +354,13 @@ img {
 
 .slider-img {
     width: 100%;
+    flex-shrink: 0;
+}
+
+@media screen and (width > 768px) {
+    .slider-img {
+        width: ;
+    }
 }
 
 .img-content {
