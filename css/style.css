@@ -245,9 +245,7 @@ img {
     background-color: var(--red);
     color: var(--white);
     display: grid;
-    grid-template-columns: ;
-    gap: 49px;
-    padding: 96px 24px 93px 40px;
+    /*padding: 96px 24px 93px 40px;*/
 }
 
 @media screen and (width > 768px) {
@@ -261,6 +259,7 @@ img {
 .steps-title {
     margin: 0;
     margin-bottom: 40px;
+    padding: 69px 24px 40px 24px;
 }
 
 @media screen and (width > 768px) {
@@ -280,6 +279,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 84px;
+    padding: 0 24px 93px 40px;
 }
 
 @media screen and (width > 768px) {
@@ -314,23 +314,10 @@ img {
     margin: 0;
 }
 
-.slider {
-    background-color: var(--bg-black);
-    color: var(--white);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-@media screen and (width > 768px) {
-    .slider {
-        flex-direction: row-reverse;
-    }
-}
-
 .slider-header {
-    padding: 64px 24px;
-    order: 2;
+    background-color: var(--bg-black);
+    padding: 54px 24px;
+    grid-row: 4/5;
 }
 
 @media screen and (width > 768px) {
@@ -338,8 +325,6 @@ img {
         padding: 100px 0 100px 39px;
     }
 }
-
-
 
 .slider-arrows {
     display: flex;
@@ -349,7 +334,6 @@ img {
 
 .slider-content {
     position: relative;
-    order: 1;
 }
 
 .slider-img {
@@ -359,7 +343,7 @@ img {
 
 @media screen and (width > 768px) {
     .slider-img {
-        width: ;
+
     }
 }
 
