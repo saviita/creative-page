@@ -131,8 +131,59 @@ img {
     padding: 40px 24px;
 }
 
+@media screen and (width>768px) {
+    .bar {
+        padding: 0;
+        padding-left: 40px;
+    }
+}
+
+@media screen and (width>1024px) {
+    .bar {
+        padding-left: 165px;
+    }
+}
+
 .bar-ul {
     display: none;
+    list-style: none;
+    margin: 0;
+}
+
+@media screen and (width>768px) {
+    .bar-ul {
+        background-color: var(--red);
+        color: var(--white);
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: 178px;
+        padding-right: 40px;
+    }
+
+    .bar-icon {
+        display: none;
+    }
+}
+
+@media screen and (width>1024px) {
+    .bar-ul {
+        padding-inline: 69px 165px;
+        gap: 32px;
+    }
+}
+
+.bar-btn {
+    background-color: var(--bg-black);
+    margin-left: 8px;
+}
+
+@media screen and (width>1024) {
+    .bar-btn {
+        margin-left: 15px;
+    }
 }
 
 .intro {
@@ -169,6 +220,12 @@ img {
         left: 39px;
         top: 77px;
     }   
+}
+
+@media screen and (width>1024px) {
+    .intro-content {
+        left: 165px;
+    }
 }
 
 .intro-title {
@@ -250,7 +307,7 @@ img {
 
 @media screen and (width > 768px) {
     .steps {
-        flex-direction: row;
+        grid-template-columns: 40% 60%;
         background-color: var(--white);
         padding: 0;
     }
@@ -265,9 +322,16 @@ img {
 @media screen and (width > 768px) {
     .steps-title {
         color: var(--text-black);
+        padding-inline: 39px 20px;
+    }
+}
+
+@media screen and (width>1024px) {
+    .steps-title {
         position: relative;
-        top: 127px;
-        left: 39px;
+        top: 275px;
+        left: 165px;
+        z-index: 1;
     }
 }
 
@@ -300,6 +364,12 @@ img {
     }
 }
 
+@media screen and (width>1024px) {
+    .steps-content {
+        padding: 244px 106px 200px 285px;
+    }
+}
+
 .step {
     position: relative;
 }
@@ -318,11 +388,37 @@ img {
     background-color: var(--bg-black);
     padding: 54px 24px;
     grid-row: 4/5;
+    margin-top: 0;
 }
 
 @media screen and (width > 768px) {
     .slider-header {
+        position: relative;
         padding: 100px 0 100px 39px;
+        grid-row: 2/3;
+        align-self: self-start;
+    }
+
+    .slider-header::after {
+        content: '';
+        position: absolute;
+        background-color: var(--bg-black);
+        top: 0;
+        right: -60px;
+        height: 100%;
+        width: 60px;
+        z-index: 1;
+    }
+}
+
+@media screen and (width>1024px) {
+    .slider-header {
+        padding: 152px 0 152px 165px;
+    }
+
+    .slider-header::after {
+        width: 190px;
+        right: -190px;
     }
 }
 
@@ -341,12 +437,6 @@ img {
     flex-shrink: 0;
 }
 
-@media screen and (width > 768px) {
-    .slider-img {
-
-    }
-}
-
 .img-content {
     background-image: linear-gradient(transparent, var(--text-black));
     position: absolute;
@@ -356,6 +446,20 @@ img {
     width: 100%;
     bottom: 0;
     right: 0;
+}
+
+@media screen and (width > 768px) {
+    .img-content {
+        height: 130px;
+        padding: 45px 40px 45px 0;
+    }
+}
+
+@media screen and (width > 1024px) {
+    .img-content {
+        height: 200px;
+        padding: 68px 154px 68px 0;
+    }
 }
 
 .slider-subtitle {
@@ -372,11 +476,49 @@ img {
 
 .slider-pattern {
     display: none;
-    position: absolute;
+}
+
+@media screen and (width > 768px) {
+    .slider-pattern {
+        position: absolute;
+        display: block;
+        top: 126px;
+        right: -90px;
+        width: 62.53px;
+        height: 28.52;
+        z-index: 2;
+    }
+}
+
+@media screen and (width>1024px) {
+    .slider-pattern {
+        width: 134px;
+        height: 60px;
+        top: 186px;
+        right: -260px;
+    }
 }
 
 .footer {
     padding: 100px 24px;
+}
+
+@media screen and (width>768px) {
+    .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 78px 40px 109px 39px;
+        gap: 150px;
+    }
+}
+
+@media screen and (width>1024px) {
+    .footer {
+        padding: 120px 165px 115px 165px;
+        gap: 0;
+        justify-content: space-between;
+    }
 }
 
 .footer-pattern {
@@ -386,4 +528,9 @@ img {
 .footer-title {
     margin: 0;
     margin-bottom: 46px;
+}
+
+.footer-btn {
+    width: 199px;
+    white-space: nowrap;
 }
