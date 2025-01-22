@@ -198,6 +198,7 @@ img {
         position: relative;
         flex-direction: row-reverse;
         gap: 0;
+        padding-bottom: 0;
     }
 }
 
@@ -264,8 +265,14 @@ img {
 @media screen and (width > 768px) {
     .design-content {
         max-width: 390px;
-        padding: 120px 40px 120px 69px;
+        padding: 120px 40px 69px;
     }   
+}
+
+@media screen and (width > 1024px) {
+    .design-content {
+        padding: 200px 106px 200px 154px;
+    }
 }
 
 .design-pattern {
@@ -280,6 +287,13 @@ img {
     .design-pattern {
         top: 145px;
         left: -31px;
+    }
+}
+
+@media screen and (width > 1024px) {
+    .design-pattern {
+        width: 135px;
+        height: 61px;
     }
 }
 
@@ -518,6 +532,7 @@ img {
         padding: 120px 165px 115px 165px;
         gap: 0;
         justify-content: space-between;
+        position: relative;
     }
 }
 
@@ -525,9 +540,27 @@ img {
     display: none;
 }
 
+@media screen and (width>1024px) {
+    .footer-pattern {
+        display: block;
+        position: absolute;
+        width: 134px;
+        height: 60px;
+        top: 150px;
+        left: -60px;
+    }
+}
+
 .footer-title {
     margin: 0;
     margin-bottom: 46px;
+    max-width: 635px;
+}
+
+@media screen and (width>768px) {
+    .footer-title {
+        margin-bottom: 0;
+    }
 }
 
 .footer-btn {
